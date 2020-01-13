@@ -39,7 +39,7 @@ FLB_TLS_DEFINE(struct flb_log, flb_log_ctx)
 /* Simple structure to dispatch messages to the log collector */
 struct log_message {
     size_t size;
-    char   msg[1024 - sizeof(size_t)];
+    char   msg[16384 - sizeof(size_t)];
 };
 
 static inline int consume_byte(flb_pipefd_t fd)
