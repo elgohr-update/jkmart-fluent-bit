@@ -29,7 +29,7 @@ RUN rm -rf /tmp/src/build/*
 
 WORKDIR /tmp/src/build/
 RUN cmake -DFLB_DEBUG=Off \
-          -DFLB_TRACE=Off \
+          -DFLB_TRACE=On \
           -DFLB_JEMALLOC=On \
           -DFLB_BUFFERING=On \
           -DFLB_TLS=On \
