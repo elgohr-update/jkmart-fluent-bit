@@ -605,6 +605,8 @@ void cb_es_flush(const void *data, size_t bytes,
                      * If trace_error is set, trace the actual
                      * input/output to Elasticsearch that caused the problem.
                      */
+                    flb_error("[out_es] error: Input\n%s",
+                              pack);
                     flb_error("[out_es] error: Output\n%s",
                              c->resp.payload);
                 }
